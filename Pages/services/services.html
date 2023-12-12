@@ -1,0 +1,315 @@
+<!-- Front End Project 
+    Group Members:
+    1. Tsering Khando Lama
+    2. Susan Wagle
+    Date: 01/12/2023
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./../../css/styles.css">
+    <link rel="stylesheet" href="./../../css/general/general.css">
+    <link rel="stylesheet" href="./../../css/services/services.css">
+    <style type="text/css">body { cursor: url('data:image/x-icon;base64,AAACAAEAICAAAAAAAACoEAAAFgAAACgAAAAgAAAAQAAAAAEAIAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABkZGQEAAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/LCwsDQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAcHBwIAAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABwcHAgAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8LCwsNAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAHBwcCAAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/xwcHAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wUFBQMAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAP8AAAD/AAAA/wAAAP8AAAD/oo/9/6KP/f+ij/3/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAD/AAAA/wAAAP8AAAD/AAAA/6KP/f+ij/3/oo/9/6KP/f+ij/3/opD9/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA/wAAAP8AAAD/o5H9/6OR/f8AAAD/oo/9/6KP/f+ij/3/oo/9/6KP/f+ikP3/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAD/AAAA/6KP/f+ij/3/oo/9/wAAAP+ij/3/oo/9/6KP/f+ij/3/oo/9/6KQ/f8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAP8AAAD/AAAA/6KP/f8AAAD/AAAA/6KP/f+ij/3/oo/9/6KP/f+ij/3/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/6KP/f+ij/3/oo/9/wAAAP+ij/3/o5H9/wAAAP8AAAD/AAAA/wAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA/wAAAP8AAAD/oo/9/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/6KP/f+ij/3/oo/9/wAAAP8AAAD/AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAD/AAAA/6KP/f+ij/3/oo/9/wAAAP8AAAD/oo/9/wAAAP8AAAD/oo/9/6OR/f8AAAD/AAAA/wAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAP8AAAD/AAAA/6KP/f+ij/3/AAAA/6KP/f+ij/3/oo/9/wAAAP8AAAD/o5H9/wAAAP8AAAD/AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAP8AAAD/oo/9/wAAAP8AAAD/oo/9/6KP/f+ij/3/AAAA/wAAAP8AAAD/AAAA/wAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/oo/9/wAAAP8AAAD/AAAA/wAAAP8AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA/////////////4B///4AH//8AB///AAf//gAH//4AD//+AA///AAP//wAH//8AB//+AAf//gAP//wAD//4AB//8AAf/+AAH//AAD//gAA//4AAP/+AAH//gAB//8AAf//AAP//wAD//+AB///gA///8Af///gf////////////8='), auto; }</style>
+    <meta
+      name="description"
+      content="Find everything you need for your furry friend at PixelPaws. From well services to high-quality pet food, we have it all for your furry friend. Kindly visit us today to give your pet the best care possible."
+  >
+    <meta property="og:title" content="PixelPaws">
+    <meta
+      property="og:image"
+      content="https://PixelPaws.netlify.app/images/hero_img.jpg"
+  >
+    <meta
+      property="og:description"
+      content="Find everything you need for your furry friend at PixelPaws. From well services to high-quality pet food, we have it all for your furry friend. Kindly visit us today to give your pet the best care possible."
+  >
+    <meta name="twitter:title" content="PixelPaws">
+    <meta
+      name="twitter:description"
+      content="Find everything you need for your furry friend at PixelPaws. From well services to high-quality pet food, we have it all for your furry friend. Kindly visit us today to give your pet the best care possible."
+  >
+    <meta
+      name="twitter:image"
+      content="https://PixelPaws.netlify.app/images/hero_img.jpg"
+  >
+    <meta name="twitter:card" content="summary_large_image">
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+    ></script>
+    <title>PixelPaws - Services</title>
+    <link rel="icon" type="image/png" href="./../../images/logo.png">
+  </head>
+
+  <body>
+    <!-- Header -->
+    <header class="serviceHeader">
+      <img
+        class="serviceBackgroundImage"
+        src="./../../images/treatment.jpg"
+        alt="treatment image"
+    >
+
+      <nav class="navigation">
+        <div class="logoContainer">
+          <img
+            src="./../../images/full-logo.png"
+            alt="LOGO"
+            style="width: 13rem"
+        >
+        </div>
+        <div class="div-nav">
+          <input type="checkbox" id="checkbox_toggle">
+          <label for="checkbox_toggle" class="hamburger">&#9776;</label>
+
+          <ul class="nav-links">
+            <li><a href="./../../index.html">Home</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="./../about-us/about-us.html">About Us</a></li>
+            <li><a href="./../contact-us/contact-us.html">Contact Us</a></li>
+          </ul>
+        </div>
+      </nav>
+
+      <div class="serviceTextContainer">
+        <h2 class="serviceWelcomeText ml-2">Welcome to paws and claws</h2>
+        <h1 class="serviceText">We are</h1>
+        <h1 class="serviceText">Professional</h1>
+        <h1 class="serviceText">
+          <span class="hightLightServiceText">Pet service </span>giver.
+        </h1>
+      </div>
+    </header>
+    <!-- Header -->
+
+    <div class="serviceInfoContainer">
+      <h2>WORKING WITH EXCELLENT</h2>
+      <br>
+      <h1 class="serviceInfoText">We Provide Everything</h1>
+      <h1 class="serviceInfoText">That you Need.</h1>
+    </div>
+
+    <!-- Main container -->
+    <main class="serviceMainRow">
+      <div class="serviceMainColumn">
+        <div class="card">
+          <img
+            class="cardImg"
+            src="./../../images/treatment.jpg"
+            alt="Avatar"
+        >
+          <div class="container">
+            <h2 class="cardHeaderText">Treatment</h2>
+            <p class="cardParagraph">
+              Most common illness seen on dogs are ear infections, itchy
+              skin/skin infections, dental disease, vomiting/ diarrhoea,
+              stiffness and pain, urinary problems and obesity. All the
+              treatments related to these things are provided by us.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="serviceMainColumn">
+        <div class="card">
+          <img class="cardImg" src="./../../images/training.jpg" alt="Avatar">
+          <div class="container">
+            <h2 class="cardHeaderText">Training</h2>
+            <p class="cardParagraph">
+              Dogs have been trained to perform a large number of practical
+              functions including search and rescue, herding livestock,
+              guarding, explosive or drug detection, disability assistance, dogs
+              have also been trained to perform recreational functions,
+              including companionship, shooting assistance.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="serviceMainColumn">
+        <div class="card">
+          <img
+            class="cardImg"
+            src="./../../images/vaccination.jpg"
+            alt="Avatar"
+        >
+          <div class="container">
+            <h2 class="cardHeaderText">Vaccination</h2>
+            <p class="cardParagraph">
+              The range of vaccines available includes rabies, distemper,
+              adenovirus (infectious canine hepatitis), parvovirus,
+              leptospirosis, parainfluenza, coronavirus, Bordetella
+              bronchiseptica, Lyme disease, and canine influenza.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="serviceMainColumn">
+        <div class="card">
+          <img class="cardImg" src="./../../images/walking.jpg" alt="Avatar">
+          <div class="container">
+            <h2 class="cardHeaderText">Walking</h2>
+            <p class="cardParagraph">
+              A dog in good general shape can enjoy a 15 to 30 minute walk
+              daily. Most breeds may need routine walks several times per day.
+              Moreover, dogs with excellent health can enjoy long walks of up to
+              two or more hours. Some will even hike with their owners for a
+              couple of hours.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="serviceMainColumn">
+        <div class="card">
+          <img class="cardImg" src="./../../images/food.jpg" alt="Avatar">
+          <div class="container">
+            <h2 class="cardHeaderText">Diet</h2>
+            <p class="cardParagraph">
+              Dogs have nutrient requirements specific to their species, meaning
+              that dog food is not simply interchangeable with cat food (or
+              people food). There are many kinds of commercial dog foods that
+              will meet these needs. Making a custom diet at home is also an
+              option, provided that you work with your vet or pet nutritionist
+              to ensure it is complete and balanced to keep your dog happy and
+              healthy. No matter what food you choose, keep an eye on your dog’s
+              Body Condition Score to make sure it maintains a healthy weight.
+              Changes in weight can indicate serious underlying health problems.
+            </p>
+          </div>
+        </div>
+      </div>
+    </main>
+    <!-- Main container -->
+
+    <!-- Pricing -->
+    <div class="pricingContainer">
+      <h1 class="planHeader">Our plans</h1>
+      <table class="bottom-space">
+        <tr style="background-color: #eee">
+          <th>Basic</th>
+          <th>Pro</th>
+          <th>Premium</th>
+        </tr>
+        <tr>
+          <td>$ 9.99 / year</td>
+          <td>$ 24.99 / year</td>
+          <td>$ 49.99 / year</td>
+        </tr>
+        <tr>
+          <td>Treatment 1 month</td>
+          <td>Treatment 6 month</td>
+          <td>Treatment 1 year</td>
+        </tr>
+        <tr>
+          <td>Training 1 month</td>
+          <td>Training 6 month</td>
+          <td>Training 1 year</td>
+        </tr>
+        <tr>
+          <td>Vaccination 1 month</td>
+          <td>Vaccination 6 month</td>
+          <td>Vaccination 1 year</td>
+        </tr>
+        <tr>
+          <td>Walking 1 month</td>
+          <td>Walking 6 month</td>
+          <td>Walking 1 year</td>
+        </tr>
+        <tr>
+          <td>Food 1 month</td>
+          <td>Food 6 month</td>
+          <td>Food 1 year</td>
+        </tr>
+        <tr>
+          <td><a class="active-button" href="#">Choose</a></td>
+          <td><a class="active-button" href="#">Choose</a></td>
+          <td><a class="active-button" href="#">Choose</a></td>
+        </tr>
+      </table>
+    </div>
+    <!-- Pricing -->
+    <!-- Footer -->
+    <footer>
+      <div class="footer-container">
+        <div class="footer-div">
+          <img
+            src="./../../images/full-logo.png"
+            alt="LOGO"
+            style="width: 13rem; margin-top: -3rem; margin-bottom: 1rem"
+        >
+          <ul class="social-icons">
+            <li>
+              <a href="https://instagram.com/" target="_blank"
+                ><ion-icon name="logo-instagram"></ion-icon
+              ></a>
+            </li>
+            <li>
+              <a href="https://facebook.com/" target="_blank"
+                ><ion-icon name="logo-facebook"></ion-icon
+              ></a>
+            </li>
+            <li>
+              <a href="https://twitter.com/" target="_blank"
+                ><ion-icon name="logo-twitter"></ion-icon
+              ></a>
+            </li>
+          </ul>
+          <p>Copyright © 2023 by PixelPaws, Inc. All rights reserved.</p>
+        </div>
+
+        <div class="footer-div">
+          <h2>CONTACT US</h2>
+          <ul>
+            <li>200-43 Tuxedo Road, Scarborough Toronto, Ontario</li>
+            <li><a href="tel:+11234567890"> +1 (123)-433-2323</a></li>
+            <li>
+              <a href="mailto:info@PixelPaws.com"> info@PixelPaws.com</a>
+            </li>
+          </ul>
+        </div>
+
+        <div class="footer-div">
+          <h2>APPS</h2>
+          <ul>
+            <li>
+              <a href="https://www.apple.com/ca/app-store/" target="_blank">
+                IOS App</a
+              >
+            </li>
+            <li>
+              <a href="https://play.google.com/" target="_blank">
+                Android App</a
+              >
+            </li>
+          </ul>
+        </div>
+
+        <div class="footer-div">
+          <h2>COMPANY</h2>
+          <ul>
+            <li><a href="./../../index.html">Home</a></li>
+            <li><a href="./services.html">Services</a></li>
+            <li><a href="./../about-us/about-us.html">About Us</a></li>
+            <li><a href="./../contact-us/contact-us.html">Contact Us</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-div">
+          <h2>RESOURCES</h2>
+          <ul>
+            <li><a href="#">Help</a></li>
+            <li><a href="#">Privacy & Terms</a></li>
+            <li><a href="#">Copyright</a></li>
+          </ul>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

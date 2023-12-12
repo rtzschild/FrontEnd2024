@@ -1,0 +1,207 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  background-color: #eac6bc;
+
+  
+
+  color: #333;
+}
+
+.bar {
+  width: 6rem;
+  text-align: center;
+  margin: 0 auto;
+  margin-bottom: 1.5rem;
+  margin-top: 1rem;
+  border-bottom: 3px solid #dc2f02;
+}
+
+
+
+
+/* Buttons */
+.button:link,
+.button:visited {
+  padding: 1rem 3rem;
+  background-color: #fff;
+  border: 1px solid #dc2f02;
+  border-radius: 5rem;
+  color: #dc2f02;
+
+  font-size: 1.8rem;
+  font-weight: 500;
+  text-decoration: none;
+  margin-right: 2rem;
+
+  transition: all 0.3s;
+}
+
+.button:hover,
+.button:active {
+  background-color: #eee;
+}
+
+.mobile-view-team-member {
+  display: none;
+}
+
+.active-button:link,
+.active-button:visited {
+  padding: 1rem 3rem;
+  background-color: #d2534b;
+  border-radius: 5rem;
+  color: #fff;
+
+  font-size: 1.8rem;
+  font-weight: 500;
+  text-decoration: none;
+
+  transition: all 0.3s;
+}
+
+.active-button:hover,
+.active-button:active {
+  background-color: #c62a02;
+}
+
+/* Headings */
+.main-heading {
+  text-align: center;
+  margin: 8rem 0;
+
+  font-size: 4.4rem;
+}
+
+.tertiary-heading {
+  font-size: 2rem;
+  line-height: 2.5;
+}
+
+/* Footer */
+footer {
+  /* height: 40rem; */
+  background-color: #333;
+  color: #eee;
+}
+
+.footer-container {
+  padding: 10rem 20%;
+  /* padding: 10rem 20rem; */
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  column-gap: 8rem;
+}
+
+.footer-div h2 {
+  font-size: 2rem;
+  font-weight: 600;
+
+  margin-bottom: 2rem;
+}
+
+.footer-div .social-icons {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.footer-div p {
+  margin-top: 3rem;
+  font-size: 1.2rem;
+  color: #ddd;
+}
+
+.footer-div .social-icons ion-icon {
+  font-size: 3rem;
+}
+
+.footer-div ul {
+  list-style: none;
+}
+
+.footer-div li:first-child {
+  font-size: 1.2rem;
+}
+
+.footer-div a:link,
+.footer-div a:visited,
+.footer-div li {
+  text-decoration: none;
+  font-size: 1.4rem;
+  line-height: 2.5;
+
+  color: #ddd;
+}
+
+.footer-div a:hover,
+.footer-div a:active {
+  color: #bbb;
+}
+
+/* Small Desktops or tablets in landscape */
+@media only screen and (max-width: 1280px) {
+  html {
+    font-size: 50% !important;
+  }
+
+  .footer-container {
+    padding: 10rem 15%;
+    grid-template-columns: 1fr 1fr 1fr;
+    row-gap: 2rem;
+  }
+}
+
+/* TABLETS */
+@media only screen and (max-width: 768px) {
+  html {
+    font-size: 40% !important;
+  }
+}
+
+/* MOBILE PHONES */
+@media only screen and (max-width: 480px) {
+  .footer-container {
+    grid-template-columns: 1fr 1fr;
+    row-gap: 2rem;
+  }
+
+  .image-text-box {
+    width: 35rem;
+    height: 9rem;
+    left: 26%;
+  }
+
+  .quote {
+    max-width: 34rem;
+    font-size: 2rem;
+    margin-top: 17%;
+    width: 42rem;
+    font-size: 1.9rem;
+  }
+
+  .verticle_line {
+    display: none;
+  }
+
+  .achievement {
+    height: fit-content;
+  }
+
+  .achievement_wrapper {
+    flex-wrap: wrap;
+  }
+
+  .team_sub_heading {
+    width: 100%;
+  }
+}

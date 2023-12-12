@@ -1,0 +1,366 @@
+<!-- Front End Project 
+    Group Members:
+    1. Tsering Khando Lama
+    2. Susan Wagle
+    Date: 01/12/2023
+-->
+
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style type="text/css">body { cursor: url('data:image/x-icon;base64,AAACAAEAICAAAAAAAACoEAAAFgAAACgAAAAgAAAAQAAAAAEAIAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABkZGQEAAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/LCwsDQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAcHBwIAAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABwcHAgAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8LCwsNAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAHBwcCAAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/xwcHAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wUFBQMAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAP8AAAD/AAAA/wAAAP8AAAD/oo/9/6KP/f+ij/3/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAD/AAAA/wAAAP8AAAD/AAAA/6KP/f+ij/3/oo/9/6KP/f+ij/3/opD9/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA/wAAAP8AAAD/o5H9/6OR/f8AAAD/oo/9/6KP/f+ij/3/oo/9/6KP/f+ikP3/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAD/AAAA/6KP/f+ij/3/oo/9/wAAAP+ij/3/oo/9/6KP/f+ij/3/oo/9/6KQ/f8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAP8AAAD/AAAA/6KP/f8AAAD/AAAA/6KP/f+ij/3/oo/9/6KP/f+ij/3/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/6KP/f+ij/3/oo/9/wAAAP+ij/3/o5H9/wAAAP8AAAD/AAAA/wAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA/wAAAP8AAAD/oo/9/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/6KP/f+ij/3/oo/9/wAAAP8AAAD/AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAD/AAAA/6KP/f+ij/3/oo/9/wAAAP8AAAD/oo/9/wAAAP8AAAD/oo/9/6OR/f8AAAD/AAAA/wAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAP8AAAD/AAAA/6KP/f+ij/3/AAAA/6KP/f+ij/3/oo/9/wAAAP8AAAD/o5H9/wAAAP8AAAD/AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAP8AAAD/oo/9/wAAAP8AAAD/oo/9/6KP/f+ij/3/AAAA/wAAAP8AAAD/AAAA/wAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/oo/9/wAAAP8AAAD/AAAA/wAAAP8AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA/////////////4B///4AH//8AB///AAf//gAH//4AD//+AA///AAP//wAH//8AB//+AAf//gAP//wAD//4AB//8AAf/+AAH//AAD//gAA//4AAP/+AAH//gAB//8AAf//AAP//wAD//+AB///gA///8Af///gf////////////8='), auto; }</style>
+    <!-- Title name  -->
+    <title>PixelPaws - Home</title>
+    <link rel="icon" type="image/png" href="./images/logo.png">
+    <meta
+      name="description"
+      content="Welcome to pixelpaws. Home for pets|Concept by Tsering and Susan"
+  >
+    <meta property="og:title" content="PixelPaws">
+    <meta
+      property="og:image"
+      content="https://PixelPaws.netlify.app/images/hero_img.jpg"
+  >
+    <meta
+      property="og:description"
+      content="Find everything you need for your furry friend at PixelPaws. From well services to high-quality pet food, we have it all for your furry friend. Kindly visit us today to give your pet the best care possible."
+  >
+    <meta name="twitter:title" content="PixelPaws">
+    <meta
+      name="twitter:description"
+      content="Find everything you need for your furry friend at PixelPaws. From well services to high-quality pet food, we have it all for your furry friend. Kindly visit us today to give your pet the best care possible."
+  >
+    <meta
+      name="twitter:image"
+      content="https://PixelPaws.netlify.app/images/hero_img.jpg"
+  >
+    <meta name="twitter:card" content="summary_large_image">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato&family=Poppins:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+  >
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/general/general.css">
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+    ></script>
+  </head>
+
+  <body>
+    <!-- Header Section -->
+    <header>
+
+      <!--welcome page-->
+      
+      <img src="images/hero_img.jpg" class="hero-img">
+      
+      
+      
+      
+         
+     
+      
+
+      <!-- Navigation Section -->
+      <nav class="navigation">
+        <div class="logoContainer">
+          <img src="./images/full-logo-white.png" alt="LOGO" style="width: 20rem">
+        </div>
+        <div class="div-nav">
+          <input type="checkbox" id="checkbox_toggle">
+          <label for="checkbox_toggle" class="hamburger">&#9776;</label>
+
+          <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="./pages/services/services.html">Services</a></li>
+            <li><a href="./pages/about-us/about-us.html">About Us</a></li>
+            <li><a href="./pages/contact-us/contact-us.html">Contact Us</a></li>
+          </ul>
+        </div>
+      </nav>
+      <!-- Welcome Page Text -->
+      <div class="hero-text">
+        <h1 class="hero-title">
+          Where Love Has Fur and Every Pawprint Tells a Tale of Cuteness.
+        </h1>
+        <br><br>
+        <p class="hero-para">
+          At PixelPaws, we sprinkle love on every paw, making tails wag and hearts purr.
+           Because happiness is fluffy, and cuteness is our specialty
+        </p>
+        <br><br><br>
+        <!-- Explore page button -->
+        <a class="active-button" href="#section-services"
+          >Explore &nbsp; &rarr;</a
+        >
+      </div>
+    </header>
+    <!-- Main -->
+    <!-- Our Services Section -->
+    <main>
+      <section id="section-services">
+        <h1 class="main-heading">Our Services</h1>
+
+        <div class="services-grid">
+          <div class="service-text">
+            <h1>01</h1>
+            <h2>Treatment</h2>
+            <p>
+              Your pet's health and happiness are our top priorities. We strive
+              to provide compassionate care and medical excellence for every
+              furry member of your family
+            </p>
+            <a href="#">Learn more &rarr;</a>
+          </div>
+
+          <img
+            class="service-img"
+            src="images/treatment.jpg"
+            alt="dog-treatment-img"
+        >
+
+          <img
+            class="service-img"
+            src="images/training.jpg"
+            alt="dog-training-img"
+        >
+          <div class="service-text">
+            <h1>02</h1>
+            <h2>Training</h2>
+            <p>
+              Training is not about dominance or control. It's about building a
+              relationship of trust, respect, and mutual understanding between
+              you and your pet
+            </p>
+            <a href="#">Learn more &rarr;</a>
+          </div>
+
+          <div class="service-text">
+            <h1>03</h1>
+            <h2>Vaccination</h2>
+            <p>
+              Prevention is preferable to treatment. The greatest approach to
+              protect your pet from serious and occasionally fatal infections is
+              to vaccinate them.
+            </p>
+            <a href="#">Learn more &rarr;</a>
+          </div>
+          <img
+            class="service-img"
+            src="images/vaccination.jpg"
+            alt="cat-vaccination-img"
+        >
+
+          <img
+            class="service-img"
+            src="images/walking.jpg"
+            alt="dog-walking-img"
+        >
+          <div class="service-text">
+            <h1>04</h1>
+            <h2>Walking</h2>
+            <p>
+              Every dog deserves daily walks in the open air. Exercise is
+              important, but so is enrichment for and time spent with your
+              animal companion.
+            </p>
+            <a href="#">Learn more &rarr;</a>
+          </div>
+
+          <div class="service-text">
+            <h1>05</h1>
+            <h2>Diet Plan</h2>
+            <p>
+              One of the most crucial things you can do to preserve your pet's
+              long-term health and pleasure is to give them a nutritious and
+              balanced diet.
+            </p>
+            <a href="#">Learn more &rarr;</a>
+          </div>
+          <img class="service-img" src="images/food.jpg" alt="dog-food-img">
+        </div>
+      </section>
+      <!-- How it works Section -->
+      <section class="section-how_it_works">
+        <h1 class="main-heading">How It Works</h1>
+        <div class="how_it_works-grid">
+          <div class="plan">
+            <ion-icon class="icon" name="clipboard-outline"></ion-icon>
+            <h3 class="tertiary-heading">Choose Plan</h3>
+            <div class="bar"></div>
+            <p>
+              We offer a variety of subscription plans to fit your pet's unique
+              needs and your budget. Sign up today and join our community.
+            </p>
+            <a href="#">Read More</a>
+          </div>
+          <div class="plan">
+            <ion-icon class="icon" name="paw-outline"></ion-icon>
+            <h3 class="tertiary-heading">Create Profile</h3>
+            <div class="bar"></div>
+            <p>
+              Make a profile today and choose the breed and type of pet you own.
+              Obtain various services based on your breed particularly.
+            </p>
+            <a href="#">Read More</a>
+          </div>
+          <div class="plan">
+            <ion-icon class="icon" name="gift-outline"></ion-icon>
+            <h3 class="tertiary-heading">Receive Benefits</h3>
+            <div class="bar"></div>
+            <p>
+              When you choose us, you can rest assured that your pet is in good
+              hands. We look forward to getting to know you and your pet.
+            </p>
+            <a href="#">Read More</a>
+          </div>
+        </div>
+      </section>
+      <!-- Our Customers Section -->
+      <section class="section-customers">
+        <div class="bg-image"></div>
+        <div class="customers-detail">
+          <h1 class="main-heading heading-light">Our Customers</h1>
+
+          <div class="customer-container">
+            <img
+              class="customer-img"
+              src="images/customer1.jpg"
+              alt="customer image"
+          >
+            <div class="customer-text">
+              <p>
+                "The team is professional, and truly cares about the well-being
+                of my cat. I highly recommend this service to anyone who wants
+                the best care for their beloved pets!"
+              </p>
+              <h4>Ivy Alexandra</h4>
+            </div>
+          </div>
+
+          <div class="customer-container">
+            <img
+              class="customer-img"
+              src="images/customer2.jpg"
+              alt="customer image"
+          >
+            <div class="customer-text">
+              <p>
+                "Recently visited the pet store, and it was fantastic! The staff was friendly and knowledgeable. The store is well-organized, clean, and has a great selection of quality pet products.`````"
+              </p>
+              <h4>James Watson</h4>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- Subscribe to our newsletter -->
+      <section class="section-newsletter">
+        <h1 class="main-heading">Our Newsletter</h1>
+        <div class="newsletter-container">
+          <p>
+            Subscribe to our newsletter for our Latest Deals and Special Offers
+          </p>
+          <input
+            class="newsletter-input"
+            type="email"
+            placeholder="Email address"
+        >
+
+          <a class="active-button" href="#">Subscribe</a>
+        </div>
+      </section>
+    </main>
+    <!-- Footer Section -->
+    <footer>
+      <div class="footer-container">
+        <div class="footer-div">
+          <img
+            src="./images/full-logo.png"
+            alt="LOGO"
+            style="width: 13rem; margin-top: -3rem; margin-bottom: 1rem"
+        >
+          <!-- Social icons -->
+          <ul class="social-icons">
+            <li>
+              <a href="https://instagram.com/" target="_blank">
+                <ion-icon name="logo-instagram"></ion-icon>
+              </a>
+            </li>
+            <li>
+              <a href="https://facebook.com/" target="_blank">
+                <ion-icon name="logo-facebook"></ion-icon>
+              </a>
+            </li>
+            <li>
+              <a href="https://twitter.com/" target="_blank">
+                <ion-icon name="logo-twitter"></ion-icon>
+              </a>
+            </li>
+          </ul>
+          <p>Copyright © 2023 by PixelPaws, Inc. All rights reserved.</p>
+        </div>
+
+        <div class="footer-div">
+          <h2>CONTACT US</h2>
+          <ul>
+            <li>265 Yorkland Blvd #400, North York, ON M2J 1S5</li>
+            <li><a href="tel:+11234567890"> +1 (123)-456-7980</a></li>
+            <li>
+              <a href="mailto:info@PixelPaws.com"> info@PixelPaws.com</a>
+            </li>
+          </ul>
+        </div>
+
+        <div class="footer-div">
+          <h2>APPS</h2>
+          <ul>
+            <!-- <li><a hrf="#"> Create Account</a></li>
+            <li><a hrefe="#"> Sign In</a></li> -->
+            <li>
+              <a href="https://www.apple.com/ca/app-store/" target="_blank">
+                IOS App</a
+              >
+            </li>
+            <li>
+              <a href="https://play.google.com/" target="_blank">
+                Android App</a
+              >
+            </li>
+          </ul>
+        </div>
+
+        <div class="footer-div">
+          <h2>COMPANY</h2>
+          <ul>
+            <li><a href="./index.html">Home</a></li>
+            <li><a href="./pages/services/services.html">Services</a></li>
+            <li><a href="./pages/about-us/about-us.html">About Us</a></li>
+            <li><a href="./pages/contact-us/contact-us.html">Contact Us</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-div">
+          <h2>RESOURCES</h2>
+          <ul>
+            <li><a href="#">Help</a></li>
+            <li><a href="#">Privacy & Terms</a></li>
+            <li><a href="#">Copyright</a></li>
+          </ul>
+        </div>
+      </div>
+    </footer>
+  
+  </body>
+</html>
